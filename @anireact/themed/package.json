@@ -1,0 +1,31 @@
+{
+    "author": "Marina Miyaoka <miyaokamarina@gmail.com> (https://t.me/miyaokamarina)",
+    "bugs": "https://github.com/anireact/themed/issues?q=is:issue+label:@anireact/themed",
+    "description": "An opinionated theme for React apps.",
+    "homepage": "https://github.com/anireact/themed/tree/master/@anireact/themed",
+    "license": "MIT",
+    "main": "dist/index.js",
+    "name": "@anireact/themed",
+    "repository": "anireact/themed",
+    "scripts": {
+        "build": "yarn build:js && yarn build:ts",
+        "build:js": "rollup -c ../../rollup.config.js",
+        "build:ts": "tsc --declaration --emitDeclarationOnly --outDir dist --pretty --rootDir src",
+        "clean": "rimraf dist",
+        "prepublishOnly": "yarn run clean && yarn run build"
+    },
+    "types": "dist/index.d.ts",
+    "version": "1.0.0-wip.1",
+    "dependencies": {
+        "@anireact/hsl": "^1.0.0-wip.1",
+        "@anireact/prelude": "^1.0.0-wip.5",
+        "@babel/runtime": "^7.3.1",
+        "core-js": "^2.6.5"
+    },
+    "devDependencies": {
+        "@types/react": "^16.8.3"
+    },
+    "peerDependencies": {
+        "react": "^16.8.2"
+    }
+}
