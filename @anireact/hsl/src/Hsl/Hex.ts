@@ -18,18 +18,16 @@ export const hslToHex = (hsla: Hsla, compact = true, alpha = true): string => {
 };
 
 export const hexToHsl = (hex: string) => {
-    const re = /^#?(?:(?<rr>[\da-f]{2})(?<gg>[\da-f]{2})(?<bb>[\da-f]{2})(?<aa>[\da-f]{2})?|(?<r>[\da-f])(?<g>[\da-f])(?<b>[\da-f])(?<a>[\da-f])?)$/u;
+    const re = /^#?(?:([\da-f]{2})([\da-f]{2})([\da-f]{2})([\da-f]{2})?|([\da-f])([\da-f])([\da-f])([\da-f])?)$/u;
 
     const result = re.exec(toLower(hex));
 
     if (!result) return [0, 0, 0, 1] as Hsla;
 
-    const { groups } = result;
-
-    const r = groups!.rr || groups!.r;
-    const g = groups!.gg || groups!.g;
-    const b = groups!.bb || groups!.b;
-    const a = groups!.aa || groups!.a || 'f';
+    const r = result[1] || result[5];
+    const g = result[2] || result[6];
+    const b = result[3] || result[7];
+    const a = result[4] || result[8];
 
     return rgbToHsl(map([r, g, b, a], x => parseInt(size(x) === 1 ? x + x : x, 16)) as Rgba);
 };
