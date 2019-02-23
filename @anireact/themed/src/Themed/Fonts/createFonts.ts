@@ -61,8 +61,6 @@ const fontMixin = (family: string, weight: string, height?: string, size?: strin
     if (height) mixin.push(`line-height:${height}`);
     if (size) mixin.push(`font-size:${size}`);
 
-    mixin.push('');
-
     return mixin.join(';');
 };
 
@@ -76,11 +74,17 @@ const headings = (h: number, s: number): Vector6<Heading> => {
     return map([1, 2, 3, 4, 5, 6], n => {
         const f = (n - 1) / 6;
 
+        const size = px(s + (ds - f * ds));
+        const height = px(h + (dh - f * dh));
+        const top = px(bt + (t - f * t));
+        const bottom = px(b - f * b);
+
         return {
-            size: px(s + (ds - f * ds)),
-            height: px(h + (dh - f * dh)),
-            top: px(bt + (t - f * t)),
-            bottom: px(b - f * b),
+            size,
+            height,
+            top,
+            bottom,
+            mixin: [`margin:${top} 0 ${bottom}`, `line-height:${height}`, `font-size:${size}`].join(';'),
         };
     }) as Vector6<Heading>;
 };

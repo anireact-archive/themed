@@ -40,4 +40,5 @@ export interface Heading {
     readonly height: string;
     readonly top: string;
     readonly bottom: string;
+    readonly mixin: string;
 }
