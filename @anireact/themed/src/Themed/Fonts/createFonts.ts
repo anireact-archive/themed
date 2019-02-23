@@ -1,5 +1,8 @@
 import { map, px, Vector6 } from '@anireact/prelude';
-import { Fonts, Heading, MediaState, RawFonts, sizes } from '..';
+import { sizes } from '../Constants/Constants';
+import { MediaState } from '../Media/MediaState';
+import { Fonts, Heading } from './Fonts';
+import { RawFonts } from './RawFonts';
 
 type UiHeight =
     | 'uiHeightUnsupported'

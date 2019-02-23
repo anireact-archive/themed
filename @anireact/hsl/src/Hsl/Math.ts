@@ -1,5 +1,7 @@
 import { fold, map, min, Numbers, PI, Vector6 } from '@anireact/prelude';
-import { C, epsilon, H, kappa, L, lengthOfRayUntilIntersect, Line, m, refY, Y } from '.';
+import { C, H, L, Y } from './Components';
+import { epsilon, kappa, m, refY } from './Constants';
+import { lengthOfRayUntilIntersect, Line } from './Geometry';
 
 export type LineX6 = Vector6<Line>;
 

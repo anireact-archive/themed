@@ -1,5 +1,5 @@
 import { atan2, cos, hypot, sin, Vector2 } from '@anireact/prelude';
-import { C } from '.';
+import { C } from './Components';
 
 /**
  * Slope, intercept.

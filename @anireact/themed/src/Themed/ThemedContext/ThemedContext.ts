@@ -1,6 +1,9 @@
 import { identity } from '@anireact/prelude';
 import { createContext } from 'react';
-import { black, createTheme, RawTheme, Theme } from '..';
+import { black } from '../Lib/black';
+import { createTheme } from '../Theme/createTheme';
+import { RawTheme } from '../Theme/RawTheme';
+import { Theme } from '../Theme/Theme';
 
 export interface ThemedContext extends Theme {
     readonly themes: ReadonlyMap<string, RawTheme>;

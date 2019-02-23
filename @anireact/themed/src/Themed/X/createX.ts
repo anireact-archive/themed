@@ -1,5 +1,8 @@
 import { map, px } from '@anireact/prelude';
-import { MediaState, RawX, sizes, X } from '..';
+import { sizes } from '../Constants/Constants';
+import { MediaState } from '../Media/MediaState';
+import { RawX } from './RawX';
+import { X } from './X';
 
 export const createX = (raw: RawX, { size, touch }: MediaState): X => {
     const s = sizes[size];

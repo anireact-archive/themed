@@ -1,4 +1,4 @@
-import { Size } from '..';
+import { Size } from './MediaState';
 
 export interface Media {
     readonly touch: boolean;

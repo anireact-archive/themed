@@ -1,5 +1,6 @@
 import { cos, PI, sin } from '@anireact/prelude';
-import { A, angleFromOrigin, distanceFromOrigin, H, Lcha, Luva, Point2D, U, V } from '.';
+import { A, H, Lcha, Luva, U, V } from './Components';
+import { angleFromOrigin, distanceFromOrigin, Point2D } from './Geometry';
 
 export const lchToLuv = ([l, c, h, a = 1 as A]: Lcha): Luva => {
     const hrad = (h / 360.0) * 2 * PI;

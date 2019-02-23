@@ -1,5 +1,7 @@
 import { map } from '@anireact/prelude';
-import { A, dotProduct, fromLinear, m, mInv, NumberX3, Rgba, toLinear, Xyza } from '.';
+import { A, Rgba, Xyza } from './Components';
+import { m, mInv, NumberX3 } from './Constants';
+import { dotProduct, fromLinear, toLinear } from './Math';
 
 export const xyzToRgb = ([x, y, z, a = 1 as A]: Xyza): Rgba => {
     return [

@@ -1,20 +1,16 @@
 import { always, getM, identity, maybe } from '@anireact/prelude';
 import React, { FunctionComponent, ReactNode, useEffect, useState } from 'react';
-
-import {
-    black,
-    createLib,
-    createTheme,
-    RawLib,
-    Size,
-    watchBounds,
-    watchHover,
-    watchKeyboard,
-    watchPrint,
-    watchTouch,
-    ThemedContext,
-    MediaState,
-} from '..';
+import { black } from '../Lib/black';
+import { createLib } from '../Lib/createLib';
+import { RawLib } from '../Lib/RawLib';
+import { MediaState, Size } from '../Media/MediaState';
+import { watchBounds } from '../Media/watchBounds';
+import { watchHover } from '../Media/watchHover';
+import { watchKeyboard } from '../Media/watchKeyboard';
+import { watchPrint } from '../Media/watchPrint';
+import { watchTouch } from '../Media/watchTouch';
+import { createTheme } from '../Theme/createTheme';
+import { ThemedContext } from '../ThemedContext/ThemedContext';
 
 export interface Themed {
     readonly id: string;

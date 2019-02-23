@@ -38,8 +38,6 @@ export default {
 
                 // eslint-disable-next-line max-statements
                 const r = async (importee, importer) => {
-                    if (importee.startsWith('@anireact/')) return r(resolve(__dirname, importee, 'src'));
-
                     const name = resolve(dir, importee);
 
                     for (const ext of extensions) {

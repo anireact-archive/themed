@@ -1,5 +1,7 @@
 import { abs } from '@anireact/prelude';
-import { A, lToY, Luva, refU, refV, U, V, X, Xyza, Y, yToL, Z } from '.';
+import { A, Luva, U, V, X, Xyza, Y, Z } from './Components';
+import { refU, refV } from './Constants';
+import { lToY, yToL } from './Math';
 
 export const luvToXyz = ([l, u, v, a = 1 as A]: Luva): Xyza => {
     if (abs(l) < 0.00000001) return [0, 0, 0, a] as Xyza;

@@ -1,5 +1,6 @@
 import { map, px, Vector10 } from '@anireact/prelude';
-import { RawMedia, Size } from '..';
+import { Size } from './MediaState';
+import { RawMedia } from './RawMedia';
 
 export type Bounds = Vector10<boolean>;
 

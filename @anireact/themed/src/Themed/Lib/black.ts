@@ -1,4 +1,4 @@
-import { RawTheme } from '..';
+import { RawTheme } from '../Theme/RawTheme';
 
 export const black: RawTheme = {
     id: 'black',

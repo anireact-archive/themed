@@ -1,5 +1,6 @@
 import { clamp, map, padStart, round, size, toLower } from '@anireact/prelude';
-import { A, Hsla, hslToRgb, Rgba, rgbToHsl } from '.';
+import { A, Hsla, Rgba } from './Components';
+import { hslToRgb, rgbToHsl } from './Derived';
 
 export const hslToHex = (hsla: Hsla, compact = true, alpha = true): string => {
     const [r, g, b, a = 1 as A] = hslToRgb(hsla);

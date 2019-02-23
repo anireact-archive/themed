@@ -1,6 +1,8 @@
 import { hsl } from '@anireact/hsl';
 import { map } from '@anireact/prelude';
-import { Colors, MediaState, RawColors } from '..';
+import { MediaState } from '../Media/MediaState';
+import { Colors } from './Colors';
+import { RawColors } from './RawColors';
 
 export const createColors = (raw: RawColors, { keyboard }: MediaState): Colors => {
     const { fg, bg, backdrop } = raw;

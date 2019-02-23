@@ -1,4 +1,5 @@
-import { A, C, Hsla, Lcha, maxChromaForLh, S } from '.';
+import { A, C, Hsla, Lcha, S } from './Components';
+import { maxChromaForLh } from './Math';
 
 export const hslToLch = ([h, s, l, a = 1 as A]: Hsla): Lcha => {
     if (l > 99.9999999) return [100, 0, h, a] as Lcha;

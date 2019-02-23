@@ -1,5 +1,5 @@
 import { Vector3 } from '@anireact/prelude';
-import { U, V, Y } from '.';
+import { U, V, Y } from './Components';
 
 export type NumberX3 = Vector3<number>;
 export type NumberX3X3 = Vector3<NumberX3>;
