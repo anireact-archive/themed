@@ -4,7 +4,8 @@
     "description": "Compact HSLᵤᵥ implementation.",
     "homepage": "https://github.com/anireact/themed/tree/master/@anireact/hsl",
     "license": "MIT",
-    "main": "dist/index.js",
+    "main": "dist/index.cjs.js",
+    "module": "dist/index.esm.js",
     "name": "@anireact/hsl",
     "repository": "anireact/themed",
     "scripts": {
@@ -15,7 +16,7 @@
         "prepublishOnly": "yarn run clean && yarn run build"
     },
     "types": "dist/index.d.ts",
-    "version": "1.0.0-wip.1",
+    "version": "1.0.0-wip.2",
     "dependencies": {
         "@anireact/prelude": "^1.0.0-wip.5",
         "@babel/runtime": "^7.3.1",
